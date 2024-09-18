@@ -1,0 +1,12 @@
+{
+  "name": "caramel-delights",
+  "version": "1.0.0",
+  "description": "Descripción de tu proyecto",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Tu Nombre",
+  "license": "ISC"
+}
