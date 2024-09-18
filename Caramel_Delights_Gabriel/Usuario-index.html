@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caramel Delights</title>
+    <link rel="icon" href="Cafe.ico">
+    <link rel="stylesheet" href="Usuario-estilo.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap">
+</head>
+<body>
+    <div class="barra-superior">
+        <img src="taza-de-cafe.png" alt="Logo" class="logo-img">
+        <a class="logo-link">Caramel Delights</a>
+    </div>
+    <div id="portada-container">
+        <img id="portada" src="Portada.png" alt="Portada" />
+        <div id="login-container">
+            <div id="inicio-recuadro">
+                <h2>Inicio Sesión</h2>
+                <form id="login-form">
+                    <input type="text" id="username" placeholder="Usuario" required>
+                    <input type="password" id="password" placeholder="Contraseña" required>
+                    <button type="submit">Entrar</button>
+                </form>
+                <p id="create-account">¿Nuevo usuario? <a href="4.2-Usuraio-index.html">Crear cuenta</a></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            // Simulación de verificación de usuario
+            if (username && password) { // Aquí puedes agregar una verificación más compleja si es necesario
+                // Guardar el nombre de usuario en localStorage
+                localStorage.setItem('username', username);
+
+                // Redirigir a la página principal
+                window.location.href = '2-index.html';
+            } else {
+                const messageElement = document.getElementById('message');
+                messageElement.textContent = 'Por favor, ingresa usuario y contraseña'; // Mensaje de error
+                messageElement.style.color = 'red';
+            }
+        });
+    </script>
+</body>
+</html>
